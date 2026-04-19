@@ -7,7 +7,8 @@ import requests
 import json
 
 
-input_token = input("输入 token: ")
+# input_token = input("输入 token: ")
+input_token = (111`)
 # 接口URL
 API_URL = "http://192.10.91.36:8081/fxfk/api/v1/fxcz/fxczlb"
 
