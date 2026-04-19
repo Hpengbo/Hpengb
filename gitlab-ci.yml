@@ -6,12 +6,11 @@ build_windows_exe:
   tags:
     - windows
   script:
-    - python -m pip install --upgrade pip
+    - pip install --upgrade pip
     - pip install pyinstaller
     - pip install -r requirements.txt
-    # 打包单文件exe，无黑窗口加 -w，有黑窗口去掉
-    - pyinstaller -F main.py
+    - pyinstaller -F -w main.py
   artifacts:
     paths:
       - dist/*.exe
-    expire_in: 7 day
+    expire_in: 30 days
