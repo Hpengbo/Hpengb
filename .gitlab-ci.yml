@@ -6,11 +6,11 @@ build_windows_exe:
   tags:
     - windows
   script:
-    - pip install --upgrade pip
+    - python -m pip install --upgrade pip
     - pip install pyinstaller
-    - pip install -r requirements.txt
+    - pip install requests
     - pyinstaller -F -w main.py
   artifacts:
+    name: "exe"
     paths:
-      - dist/*.exe
-    expire_in: 30 days
+      - dist\*.exe
